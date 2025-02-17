@@ -1,18 +1,31 @@
 import { useState } from "react";
+import Hi from "./components/Hi";
 
-interface UserI {
-  id: number;
-  level: number;
-  login?: boolean;
-}
-function App() {
-  // useState의 초기값을 반드시 줘야한다.
-  // 처음에는 추론보다는 제네릭으로 타입 변수를 지정해주자.
+const App = (): JSX.Element => {
   const [count, setCount] = useState<number>(0);
-  // 객체형 타입 정의하기
-
-  const [user, setUser] = useState<UserI | null>(null);
-  return <div>App</div>;
-}
+  const add = (): void => {
+    const temp = count + 1;
+    setCount(temp);
+  };
+  const minus = (num: number): void => {
+    const temp = count - num;
+    setCount(temp);
+  };
+  return (
+    <div>
+      App
+      <Hi
+        age={10}
+        name="홍길동"
+        count={count}
+        setCount={setCount}
+        add={add}
+        minus={minus}
+      >
+        <p>안녕하세요</p>
+      </Hi>
+    </div>
+  );
+};
 
 export default App;
