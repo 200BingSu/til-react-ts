@@ -1,6 +1,3 @@
-# State의 이해
-
-```ts
 import { useState } from "react";
 
 interface UserI {
@@ -19,4 +16,3 @@ function App() {
 }
 
 export default App;
-```
