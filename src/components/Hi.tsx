@@ -1,18 +1,13 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { FormEvent } from "react";
 
-interface HiProps {
-  age: number;
-  name: string;
-  count: number;
-  setCount: Dispatch<SetStateAction<number>>;
-  add: () => void;
-  minus: (num: number) => void;
-  children?: React.ReactNode;
-}
-const Hi = ({ age, name }: HiProps): JSX.Element => {
+const Hi = (): JSX.Element => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
-      Hi {age} {name}
+      <form onSubmit={e => handleSubmit(e)}></form>
     </div>
   );
 };
