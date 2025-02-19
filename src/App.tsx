@@ -1,10 +1,10 @@
-import Hi from "./components/Hi";
+import Todo from "./components/Todo";
 
 const App = (): JSX.Element => {
   return (
     <div>
       App
-      <Hi />
+      <Todo />
     </div>
   );
 };
