@@ -13,7 +13,7 @@
     "@hookform/resolvers": "^3.10.0",
     "@types/axios": "^0.9.36",
     "@types/react-router-dom": "^5.3.3",
-    "antd": "^5.23.0",
+    "antd": "^5.24.1",
     "axios": "^1.7.9",
     "eslint-plugin-react": "^7.37.4",
     "quill": "^2.0.3",
